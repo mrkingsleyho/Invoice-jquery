@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head starts here -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice Book | Home</title>
+    <!-- link to google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,600&display=swap" rel="stylesheet">
+    <!-- link to fontawesome -->
+    <script src="https://kit.fontawesome.com/9afc9229b5.js" crossorigin="anonymous"></script>
+    <!-- link to style sheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<!-- head ends here -->
+
+<!-- body starts here -->
+
+<body>
+
+    <!-- header starts here -->
+    <header>
+        <div class="headerTop wrapper">
+            <nav>
+                <a href="#">
+                    <img src="./assets/logo.png" alt="invoice book logo">
+                </a>
+            </nav>
+        </div>
+        <div class="headerBottom">
+            <div>Create your invoice in minutes </div>
+            <p>
+                Invoice Book makes invoicing so simple, you’ll be amazed at the time you have to focus on doing what you
+                love. Who would have thought invoice software could do that?
+            </p>
+            <a href="#main">get started</a>
+        </div>
+    </header>
+    <!-- header ends here -->
+
+    <!-- main starts here -->
+    <main class="wrapper" id="main">
+        <h1>
+            Add New Invoice
+        </h1>
+
+        <!-- preparation section starts here -->
+        <section class="preparation">
+            <ul>
+
+                <!-- Add customer data starts here -->
+                <li>
+                    <button id="addCustomer" class="fullButton">
+                        <i class="fas fa-user-plus"></i>
+                        <div>Add customer</div>
+                    </button>
+                    <form id="customerForm" action="">
+                        <div>
+                            <label for="customerName">
+                                Customer Name
+                            </label>
+                            <input type="text" id="customerName" required>
+                        </div>
+                        <div>
+                            <label for="customerAddress">
+                                Address
+                            </label>
+                            <input type="text" id="customerAddress">
+                        </div>
+                        <div>
+                            <label for="customerCity">
+                                City
+                            </label>
+                            <input type="text" id="customerCity">
+                        </div>
+                        <div>
+                            <label for="customerProvince">
+                                Province
+                            </label>
+                            <input type="text" id="customerProvince">
+                        </div>
+                        <div>
+                            <label for="customerCountry">
+                                Country
+                            </label>
+                            <select id="customerCountry">
+                            </select>
+                        </div>
+                        <div>
+                            <label for="customerPostal">
+                                Postal Code
+                            </label>
+                            <input type="text" id="customerPostal">
+                        </div>
+                        <div class="center">
+                            <input type="submit" id="save" value="save">
+                        </div>
+
+                    </form>
+                </li>
+                <!-- add customer data ends here -->
+
+                <!-- add company data starts here -->
+                <li>
+                    <button id="addCompany" class="fullButton">
+                        <i class="far fa-building"></i>
+                        <div>Add your company</div>
+                    </button>
+                    <form id="companyForm" action="">
+                        <div>
+                            <label for="companyName">
+                                Company Name
+                            </label>
+                            <input type="text" id="companyName" required>
+                        </div>
+                        <div>
+                            <label for="companyAddress">
+                                Address
+                            </label>
+                            <input type="text" id="companyAddress">
+                        </div>
+                        <div>
+                            <label for="companyCity">
+                                City
+                            </label>
+                            <input type="text" id="companyCity">
+                        </div>
+                        <div>
+                            <label for="companyProvince">
+                                Province
+                            </label>
+                            <input type="text" id="companyProvince">
+                        </div>
+                        <div>
+                            <label for="companyCountry">
+                                Country
+                            </label>
+                            <select id="companyCountry">
+                            </select>
+                        </div>
+                        <div>
+                            <label for="companyPostal">
+                                Postal Code
+                            </label>
+                            <input type="text" id="companyPostal">
+                        </div>
+                        <div>
+                            <label for="taxValue">
+                                Tax Percent
+                            </label>
+                            <input type="number" id="taxValue" max="100" min="0" placeholder="%" step="0.01">
+                        </div>
+
+                        <div class="center">
+                            <input type="submit" id="save" value="save">
+                        </div>
+
+                    </form>
+                </li>
+                <!-- add company data ends here -->
+            </ul>
+
+            <!-- Add product starts here -->
+            <form id="productForm" action="" class="productForm">
+                <div>
+                    <label for="itemName">
+                        Item Name
+                    </label>
+                    <input type="text" id="itemName" required>
+                </div>
+                <div>
+                    <label for="quantity">
+                        Quantity
+                    </label>
+                    <input type="number" id="quantity" required value="1" min="1">
+                </div>
+                <div>
+                    <label for="price">
+                        Price
+                    </label>
+                    <input type="number" id="price" required step="0.01" min="0.01">
+                </div>
+               <div> <input type="submit" id="add" value="Add"></div>
+            </form>
+            <!-- Add product endss here -->
+
+        </section>
+        <!-- preparation section ends here -->
+
+        <!-- invoice section starts here -->
+        <section id="invoice">
+            <div class="invoice">
+                <div class="invoiceHeader">
+                    <h1>invoice</h1>
+                    <span class="companyInfo">
+                        <h2 id="comName"></h2>
+                        <div id="comAddress">
+                        </div>
+                        <span id="comCity">
+                        </span>
+                        <span id="comProvince">
+                        </span>
+                        <span id="comCountry">
+                        </span>
+                        <div id="comPostal">
+                        </div>
+                    </span>
+                </div>
+                <div class="invoiceBottom">
+                    <h3 class="date">
+                        date of issue:
+                    </h3>
+                    <span id="date">
+
+                    </span>
+                    <div class="customerInfo">
+                        <div>
+                            <h3>
+                                billed to:
+                            </h3>
+                        </div>
+                        <div id="cusName">
+                        </div>
+                        <div id="cusAddress">
+                        </div>
+                        <span id="cusCity">
+                        </span>
+                        <span id="cusProvince">
+                        </span>
+                        <span id="cusCountry">
+                        </span>
+                        <div id="cusPostal">
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="headings">
+                            <h3>Product Name</h3>
+                            <h3>Quantity</h3>
+                            <h3>Price</h3>
+                            <h3>Subtotal</h3>
+                            <span></span>
+                        </li>
+
+                    </ul>
+                    <div class="hidden">
+                        <span></span>
+                        <h3>Subtotal</h3>
+                        <span id="total"></span>
+                    </div>
+                    <div class="hidden">
+                        <span></span>
+                        <h3>Sales tax</h3>
+                        <span id="tax"></span>
+                    </div>
+                    <div class="hidden">
+                        <span></span>
+                        <h3>Grand total</h3>
+                        <span id="grandTotal"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- invoice section ends here -->
+        <div class="center">
+        <input type="button" value="print invoice" id="print" class="buttonHidden"></input>
+    </div>
+    </main>
+    <!-- main ends here -->
+
+    <!-- footer starts here -->
+    <footer>
+        <p class="wrapper">
+            <span aria-hidden="true">&copy;</span><span class="sr-only">all rights reserved</span> 2022 invoiceBook.com
+        </p>
+    </footer>
+    <!-- footer ends here -->
+
+    <!-- link to jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- link to javascript file -->
+    <script src="./script.js"></script>
+</body>
+<!-- body ends here -->
+
+</html>
+<!-- html ends here -->

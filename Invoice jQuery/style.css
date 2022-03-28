@@ -1,0 +1,671 @@
+/* --------------setup code starts here -------------------*/
+
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article, aside, footer, header, nav, section {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+figcaption, figure, main {
+    display: block
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b, strong {
+    font-weight: inherit
+}
+
+b, strong {
+    font-weight: bolder
+}
+
+code, kbd, samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background-color: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+audio, video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+img {
+    border-style: none
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button, input {
+    overflow: visible
+}
+
+button, select {
+    text-transform: none
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details, menu {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+canvas {
+    display: inline-block
+}
+
+template {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: '';
+    clear: both;
+    height: 0;
+}
+
+html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* ------------------ general styles starts here ------------------ */
+
+/* set the padding and margin for some elements to zero */
+
+body, p, ul, h1, h2, h3, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* set the font size for the base element */
+
+html {
+    font-size: 62.5%;
+}
+
+/* set the font properties for the body */
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F8F8;
+    color: #434343;
+}
+
+/* set the style for the wrapper class */
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 30px;
+    max-width: 1200px;
+}
+
+/* to style the element shown in the center */
+
+.center {
+    text-align: center;
+}
+
+/* to style heading 1 in the page */
+
+h1 {
+    padding: 3% 0;
+    font-size: calc(1.5vw + 1.6rem);
+    font-weight: 600;
+}
+
+/* to style headings 2 in the page */
+
+h2 {
+    font-size: calc(1.2vw + 1.2rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #0061AE;
+    margin-bottom: 7%;
+}
+
+/* to style headings 3 in the page */
+
+h3 {
+    text-transform: uppercase;
+    color: #0061AE;
+    font-size: calc(0.8vw + 0.3rem);
+    font-weight: 600;
+    /* display: inline-block; */
+}
+
+/* to style all images on the page */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* to style all the paragraphs in the page */
+
+p {
+    width: 55%;
+    line-height: 2.5;
+}
+
+/* to hide some elemnts in the page */
+
+.hidden, .buttonHidden {
+    display: none;
+}
+
+/* to style all the lists in the page */
+
+ul {
+    list-style: none;
+}
+
+/* to style all the list items in the page */
+
+li {
+    padding: 1% 0;
+}
+
+/* to style all the icons in the page */
+
+i {
+    font-size: 4rem;
+}
+
+/* to style all the children elements of any form */
+
+form * {
+    margin: 0 1% 0.5% 0;
+}
+
+/* to style all the inputs of button and submit types */
+
+input[type=submit], input[type=button] {
+    margin: 2% 0;
+    text-align: center;
+    width: 170px;
+    height: 30px;
+    font: inherit;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #F9BE70;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+
+/* to style all the inputs (button and submit types) and all the links in hover and focus stats */
+
+input[type=submit]:hover, input[type=submit]:focus, a:hover, a:focus, input[type=button]:hover, input[type=button]:focus {
+    background: #434343;
+    letter-spacing: 3px;
+    color: #fff;
+    transition: all 0.4s ease 0s;
+}
+
+/* ------------------ general styles ends here ------------------ */
+
+/* ------------------ header styles starts here ------------------ */
+
+/* to style the header */
+
+header {
+    background-color: #F8F8F8;
+    min-height: 20vh;
+    margin-bottom: 2%;
+}
+
+/* to style the top part of the header */
+
+.headerTop {
+    min-height: 10vh;
+    padding: 2% 0;
+}
+
+/* to style the bottom of the header */
+
+.headerBottom {
+    background-image: url('./assets/bg.jpg');
+    min-height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10%;
+}
+
+/* to style the div in the bottom of the header */
+
+.headerBottom div {
+    font-family: 'Courgette', cursive;
+    font-size: 5rem;
+    color: #F8F8F8;
+}
+
+/* to style the children of the headerBottom */
+
+.headerBottom * {
+    margin-bottom: 2%;
+}
+
+/* to style all the link in the headerBottom  */
+
+.headerBottom a {
+    background-color: #F9BE70;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    font: inherit;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+/* to style all the inputs and select elements in the page */
+
+input, select {
+    width: 200px;
+    border-radius: 5px;
+    font: inherit;
+    color: inherit;
+    padding-left: 5px;
+}
+
+/* to style any invalid input */
+
+input:invalid {
+    box-shadow: none;
+}
+
+/* ------------------ header styles ends here ------------------ */
+
+/* ------------------ main styles starts here ------------------ */
+
+/* main section styles */
+
+main {
+    background-color: #ffffff;
+    padding: 2%;
+}
+
+/* ------------------ main styles ends here ------------------ */
+
+/* ------------------ preperation section styles starts here ------------------ */
+
+/* to style the list of add buttons in the preperation section */
+
+.preparation ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* to style the items of the list in the presperation sectoin*/
+
+.preparation li {
+    margin-right: 5%;
+}
+
+/* to style the add customer and add company forms */
+
+.preparation li form {
+    display: none;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    box-shadow: 2px 2px #888888;
+    width: 450px;
+    padding: 3%;
+    margin-top: 4%;
+}
+
+/* to style all the labels in list of the preparation section */
+
+.preparation ul label {
+    width: 30%;
+    display: inline-block;
+}
+
+/* to style the product form */
+
+.productForm {
+    margin-top: 4%;
+    display: flex;
+}
+
+/* to style the add button */
+
+.fullButton {
+    border: 1px solid #B2C2CD;
+    background: #ffffff;
+    border-radius: 10px;
+    height: 200px;
+    font: inherit;
+    padding: 4%;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 170px;
+    cursor: pointer;
+    text-transform: none;
+    transition: all 0.4s ease 0s;
+}
+
+/* to style the children of the fullButton */
+
+.fullButton * {
+    margin-bottom: 20%;
+}
+
+/* to style the fullButton in hover state*/
+
+.fullButton:hover {
+    transform: scale(1.1);
+}
+
+/* to style the spans in the hidden div */
+
+.hidden span {
+    width: 36%;
+    display: inline-block;
+}
+
+/* ------------------ preperation section styles ends here ------------------ */
+
+/* ------------------ invoice section styles starts here ------------------ */
+
+/* to style heading1 in the invoice section */
+
+.invoice h1 {
+    text-transform: uppercase;
+}
+
+/* to style the products list in the invoice section  */
+
+.invoice ul {
+    margin-bottom: 5%;
+    border-bottom: 1px dashed #000000;
+}
+
+/* to style the span in the list item of the invoice section */
+
+.invoice li span, .invoiceBottom h3 {
+    width: 18%;
+    display: inline-block;
+}
+
+h3.date {
+    width: 13%;
+}
+
+/* to style the remove button in the invoice section */
+
+.remove {
+    cursor: pointer;
+}
+
+/* to style the invoice div */
+
+.invoice {
+    min-height: 200px;
+    display: none;
+    border: 1px solid #888888;
+    box-shadow: 5px 5px #888888;
+    margin: 2% 0;
+    line-height: 1.5;
+}
+
+/* to style ll the direct children of the invoice div */
+
+.invoice>* {
+    margin-bottom: 2%;
+}
+
+/* to style the header of the invoice */
+
+.invoiceHeader {
+    background-color: #F8F8F8;
+    padding: 2%;
+}
+
+/* to style headings 1 in the invoice section */
+
+.invoice h1 {
+    text-align: left;
+    width: 70%;
+    display: inline-block;
+}
+
+/* to style the invoice table headings */
+
+.headings {
+    display: none;
+    border-bottom: 2px solid #000000;
+}
+
+/* to style the lower part of the invoice */
+
+.invoiceBottom {
+    padding: 3%;
+}
+
+/* to style all the direct children of the lower part of the invoice */
+
+.invoiceBottom>* {
+    margin-bottom: 2%;
+}
+
+/* to style the customer and company info in the invoice section*/
+
+.customerInfo, .companyInfo {
+    display: none;
+    margin-bottom: 3%;
+}
+
+/* ------------------ invoice section styles ends here ------------------ */
+
+/* ------------------ footer styles starts here ------------------ */
+
+footer {
+    background-color: #28BDE5;
+    min-height: 10vh;
+    padding: 2%;
+    margin-top: 2%;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* ------------------ footer styles ends here ------------------ */
+
+/* media Queries */
+
+@media(max-width: 880px) {
+    .productForm {
+        flex-direction: column;
+    }
+    .productForm label {
+        width: 100px;
+        display: inline-block;
+    }
+    .productForm div:last-child {
+        text-align: center;
+    }
+}
+
+@media(max-width: 650px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media(max-width: 480px) {
+    .preparation li form {
+        width: 300px;
+    }
+}
